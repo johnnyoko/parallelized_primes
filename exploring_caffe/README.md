@@ -2,9 +2,6 @@
 Caffe is a deep learning framework developed by Berkeley AI Research (BAIR) that is used in scientific research and engineering. It is an open-source software library written in C++, with a Python interface, and is designed for efficiency and speed in training and deploying deep neural networks. Caffe is widely used in a variety of applications, such as **image classification, object detection, speech recognition, and natural language processing**. It has been used in numerous scientific studies, including in the fields of astronomy, biology, and medical imaging, and is also used by major technology companies such as Google, Microsoft, and NVIDIA. Caffe can be considered as a programming tool and a "middleware" between the user and the hardware, providing a flexible and efficient platform for building and deploying deep learning models.
 
 # Installation
-*Note: this guide is written for the MSU HPC*
-
-
 First, make sure you have the required dependencies installed on your system:
 
     sudo apt-get update
