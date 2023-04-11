@@ -37,12 +37,23 @@ And that's it! You should now have Caffe installed on your Linux system.
 # Example Code
 Download the dataset:
 
-        wget https://www.cs.toronto.edu/~kriz/cifar-10-binary.tar.gz
-        tar -xzvf cifar-10-binary.tar.gz
+    wget https://www.cs.toronto.edu/~kriz/cifar-10-binary.tar.gz
+    tar -xzvf cifar-10-binary.tar.gz
+Download the .prototxt that defines a fully-connected neural network with one hidden layer (fc1) and a softmax output layer (loss).
+
+    wget https://www.github.com/johnnyoko/parallelized_primes/cifar10_quick_train_test.prototxt
+
 Convert the dataset to LMDB format:
 
-        ~/caffe/build/tools/convert_cifar_data.bin data/cifar10 data/cifar10/cifar_train.bin data/cifar10/cifar_mean.binaryproto
-        
+    ~/caffe/build/tools/convert_cifar_data.bin data/cifar10 data/cifar10/cifar_train.bin data/cifar10/cifar_mean.binaryproto
+    
+To train and test the network, you can use the same commands as before:
+
+    $ ./build/tools/caffe train --solver=examples/my_example/solver.prototxt
+    $ ./build/tools/caffe test --model=examples/my_example/my_net.prototxt --weights=examples/my_example/my_net_iter_10000.caffemodel --iterations=100
+Note that the paths to the solver and network files may be different depending on where you saved them.     
+
+cifar10_quick_train_test.prototxt defines a fully-connected neural network with one hidden layer (fc1) and a softmax output layer (loss). The accuracy layer is used to calculate the classification accuracy during testing.
        
         
 
