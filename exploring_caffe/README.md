@@ -18,6 +18,7 @@ Copy the Makefile.config.example file to create the Makefile.config file:
 
 Note: The settings can be modified as necessary by opening the Makefile.config, for example, if you want to use the CPU version of Caffe, uncomment the CPU_ONLY := 1 line.
 
+# Example Code
 Now, you can build Caffe. This will compile Caffe with 2 threads. If you have more or less cores, adjust the -j flag accordingly.:
 
     make all -j2
@@ -34,7 +35,7 @@ This will copy the Caffe binaries to /usr/local/bin/caffe.
 
 And that's it! You should now have Caffe installed on your Linux system.
 
-# Example Code
+# Loading in dataset
 Download the dataset:
 
     wget https://www.cs.toronto.edu/~kriz/cifar-10-binary.tar.gz
@@ -50,10 +51,8 @@ Convert the dataset to LMDB format:
 To train and test the network, you can use the same commands as before:
 
     $ ./build/tools/caffe train --solver=examples/my_example/solver.prototxt
-    $ ./build/tools/caffe test --model=examples/my_example/my_net.prototxt --weights=examples/my_example/my_net_iter_10000.caffemodel --iterations=100
+    $ ./build/tools/caffe test --model=examples/my_example/my_net.prototxt --weights=examples/my_example/my_net_iter_100.caffemodel --iterations=100
 Note that the paths to the solver and network files may be different depending on where you saved them.     
-
-cifar10_quick_train_test.prototxt defines a fully-connected neural network with one hidden layer (fc1) and a softmax output layer (loss). The accuracy layer is used to calculate the classification accuracy during testing.
        
         
 
