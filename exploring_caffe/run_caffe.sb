@@ -1,25 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=caffe-job
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=2
-#SBATCH --mem=1G
-#SBATCH --time=01:00:00
-#SBATCH --output=caffe-output-%j.out
-#SBATCH --error=caffe-error-%j.err
+#SBATCH --job-name=caffe_job
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=1GB
+#SBATCH --time=10:00
 
-# Load necessary modules
-module load cuda/11.2
-module load cudnn/8.1.1-cuda-11.2
+module load caffe
 
-# Set up environment variables
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.2/lib64
-
-# Activate your virtual environment
-source /path/to/your/virtual/environment/bin/activate
-
-# Change directory to the location of your Caffe code
-cd /path/to/your/caffe/code
-
-# Run your Caffe job
-caffe train --solver=solver.prototxt 2>&1 | tee caffe.log
+./build/tools/caffe train --solver=examples/my_example/solver.prototxt
