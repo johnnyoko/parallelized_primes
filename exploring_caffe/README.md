@@ -1,7 +1,7 @@
 # Abstract
 Caffe is a deep learning framework developed by Berkeley AI Research (BAIR) that is used in scientific research and engineering. It is an open-source software library written in C++, with a Python interface, and is designed for efficiency and speed in training and deploying deep neural networks. Caffe is widely used in a variety of applications, such as **image classification, object detection, speech recognition, and natural language processing**. It has been used in numerous scientific studies, including in the fields of astronomy, biology, and medical imaging, and is also used by major technology companies such as Google, Microsoft, and NVIDIA. Caffe can be considered as a programming tool and a "middleware" between the user and the hardware, providing a flexible and efficient platform for building and deploying deep learning models.
 
-# Installation without batch script
+# Installation
 First, make sure you have the required dependencies installed on your system:
 
     sudo apt-get update
@@ -34,17 +34,18 @@ This will copy the Caffe binaries to /usr/local/bin/caffe.
 
 And that's it! You should now have Caffe installed on your Linux system.
 
-# Installation with batch script
-After locating the run_caffe.sb download this command with add the script to the queue for execution
+# Example Code
+Download the dataset:
 
-        sbatch run_caffe.sb
+        wget https://www.cs.toronto.edu/~kriz/cifar-10-binary.tar.gz
+        tar -xzvf cifar-10-binary.tar.gz
+Convert the dataset to LMDB format:
+
+        ~/caffe/build/tools/convert_cifar_data.bin data/cifar10 data/cifar10/cifar_train.bin data/cifar10/cifar_mean.binaryproto
+        
        
-Monitor the job status using
+        
 
-        squeue -u <username>
-This will display a list of jobs submitted by the specified user, including the job ID, status, and time since submission.
-
-Once the job is complete, retrieve the output files from the specified output directory.
 
 
 # References 
