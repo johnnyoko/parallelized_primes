@@ -35,6 +35,15 @@ This will copy the Caffe binaries to /usr/local/bin/caffe.
 
 And that's it! You should now have Caffe installed on your Linux system.
 
+# Submission script
+Locate the solver.prototxt file, for example, if your solver.prototxt file is located in the examples/my_example directory, you would modify the caffe train command in the submission script as follows:
+
+    ./build/tools/caffe train --solver=examples/my_example/solver.prototxt
+you can submit the script to the batch scheduler using the sbatch command:
+
+    sbatch my_submission_script.sh
+
+
 # Loading in dataset
 Download the dataset:
 
@@ -53,10 +62,6 @@ To train and test the network, you can use the same commands as before:
     $ ./build/tools/caffe train --solver=examples/my_example/solver.prototxt
     $ ./build/tools/caffe test --model=examples/my_example/my_net.prototxt --weights=examples/my_example/my_net_iter_100.caffemodel --iterations=100
 Note that the paths to the solver and network files may be different depending on where you saved them.     
-       
-        
-
-
 
 # References 
 Caffe's official website: http://caffe.berkeleyvision.org/
