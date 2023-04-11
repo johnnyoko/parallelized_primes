@@ -21,13 +21,13 @@ Copy the Makefile.config.example file to create the Makefile.config file:
 
 Note: The settings can be modified as necessary by opening the Makefile.config, for example, if you want to use the CPU version of Caffe, uncomment the CPU_ONLY := 1 line.
 
-Now, you can build Caffe. This will compile Caffe with eight threads. If you have more or less cores, adjust the -j flag accordingly.:
+Now, you can build Caffe. This will compile Caffe with 2 threads. If you have more or less cores, adjust the -j flag accordingly.:
 
-    make all -j8
+    make all -j2
 
 After the build is complete, run the tests to make sure everything is working properly:
 
-    make test -j8
+    make test -j2
 
 (OPTIONAL) If you want to install Caffe system-wide, run:
 
