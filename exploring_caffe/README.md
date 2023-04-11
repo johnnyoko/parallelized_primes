@@ -36,3 +36,14 @@ After the build is complete, run the tests to make sure everything is working pr
 This will copy the Caffe binaries to /usr/local/bin/caffe.
 
 And that's it! You should now have Caffe installed on your Linux system.
+
+
+Extra Resources 
+
+    Caffe's official website: http://caffe.berkeleyvision.org/
+    Caffe installation instructions on GitHub: https://github.com/BVLC/caffe/blob/master/INSTALL.md
+    NVIDIA CUDA Toolkit installation guide: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
+    NVIDIA cuDNN installation guide: https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html
+    OpenBLAS installation guide: https://github.com/xianyi/OpenBLAS/wiki/Installation-Guide
+    HDF5 installation guide: https://support.hdfgroup.org/HDF5/Tutor/installation.html
+    Python and its libraries (NumPy, SciPy, matplotlib) can be installed using pip or conda.
