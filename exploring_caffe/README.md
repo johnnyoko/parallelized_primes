@@ -38,7 +38,7 @@ This will copy the Caffe binaries to /usr/local/bin/caffe.
 And that's it! You should now have Caffe installed on your Linux system.
 
 
-# Extra Resources 
+# Referances 
 Caffe's official website: http://caffe.berkeleyvision.org/
 
 Caffe installation instructions on GitHub: https://github.com/BVLC/caffe/blob/master/INSTALL.md
