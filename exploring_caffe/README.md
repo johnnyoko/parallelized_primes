@@ -44,7 +44,7 @@ you can submit the script to the batch scheduler using the sbatch command:
     sbatch my_submission_script.sh
 
 
-# Loading in dataset
+# Loading in a dataset
 Download the dataset:
 
     wget https://www.cs.toronto.edu/~kriz/cifar-10-binary.tar.gz
